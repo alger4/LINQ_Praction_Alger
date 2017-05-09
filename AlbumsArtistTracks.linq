@@ -1,6 +1,6 @@
 <Query Kind="Statements">
   <Connection>
-    <ID>ee1b0671-5511-49a4-884e-ae2f358ddab7</ID>
+    <ID>ffa85d83-a221-4649-a35f-a47f2d55e6be</ID>
     <Persist>true</Persist>
     <Server>.\SQLEXPRESS</Server>
     <Database>Chinook</Database>
@@ -18,7 +18,8 @@ var results = from x in Artists
 									  Tacks=from tr in t.Tracks 
 									  			select new {
 												TrackName=tr.Name,
-												GenreId=tr.GenreId,
+												Genre=tr.Genre.Name,
+												MediaType=tr.MediaType.Name,
 												Composer=tr.Composer,
 												Milliseconds=tr.Milliseconds
 												}
